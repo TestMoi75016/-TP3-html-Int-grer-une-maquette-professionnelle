@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[TP3 html] Intégrer une maquette professionnelle</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Les liens de la nav -->
+    <!-- Je pense la faire en display:grid -->
+    <nav>
+      <ul>
+        <li><a href="">Accueil</a></li>
+        <!--a vérifier-->
+        <li>Business school</li>
+        <li>Ecole ESport</li>
+        <li>Court de jeux vidéo</li>
+        <li>Le campus</li>
+        <li>Newsroom</li>
+        <li>Parents</li>
+        <li>FR|EN</li>
+      </ul>
+    </nav>
+    <!-- Section header -->
+    <!-- Tout en block , text align: center;. arriere plan = z-index: 1; -->
+    <header>
+      <img src="./assets/img/bg.jpg" alt="Ceci est une image" />
+      <img src="./assets/img/logo-gc-hero.png" alt="Ceci est une image" />
+      <h2>PASSION. PROFESSIONNALISME. PERFORMANCE.</h2>
+      <button>gaming</button>
+    </header>
+    <!-- Section-un -->
+    <section class="section-un">
+      <p>
+        Imaginé par des professionnels des jeux vidéo et de l'éducation, Gaming
+        Campus est un lieu unique pour révéler les talents et développer les
+        compétences
+      </p>
+    </section>
+    <!-- Section deux avec 3 container row -->
+    <!-- Je pense mettre section en flex et l'interieur des row en flex puis centrer  -->
+    <section class="section-deux">
+      <div class="rowGBS">
+        <img src="./assets/img/logo-gbs-home.png" alt="Ceci est une image" />
+        <h2>GAMING BUSINESS SCHOOL</h2>
+        <p>
+          formez-vous dans la premire école de management dédiée aux enjeux et
+          métiers du jeux vidéo.
+        </p>
+        <button>EN SAVOIR PLUS</button>
+      </div>
+      <div class="rowGA">
+        <img src="./assets/img/logo-gbs-home.png" alt="Ceci est une image" />
+        <h2>GAMING ACADEMY</h2>
+        <p>
+          formez-vous dans la premire école de management dédiée aux enjeux et
+          métiers du jeux vidéo.
+        </p>
+        <button>EN SAVOIR PLUS</button>
+      </div>
+      <div class="rowGG">
+        <img src="./assets/img/logo-gbs-home.png" alt="Ceci est une image" />
+        <h2>GAMING GURU</h2>
+        <p>
+          formez-vous dans la premire école de management dédiée aux enjeux et
+          métiers du jeux vidéo.
+        </p>
+        <button>EN SAVOIR PLUS</button>
+      </div>
+    </section>
+    <!-- section trois -->
+    <section class="section-trois">
+      <div class="row-entête">
+        <div class="row-titre">
+          <h1>LES NEWS DU CAMPUS</h1>
+          <p>
+            Suivez l'actualité de Gaming Campus, de G. Guru,G.B.S et G.Academy.
+          </p>
+        </div>
+        <div class="button-container">
+          <button>LA NEWSROOM</button>
+        </div>
+      </div>
+      <div class="row-section-trois">
+        <div class="bloc-un">
+          <img src="./assets/img/ri8decembre.jpg" alt="Ceci est une image" />
+          <h4>Réunion d'information 19 décembre</h4>
+          <p>
+            Pendant tout le mois d'octobre venez rencontrer l'équipe pédagogique
+            du Gaming Campus: Campus Lyon et stand Gaming Campus à la PGW18
+          </p>
+        </div>
+
+        <div class="bloc-deux">
+          <img src="./assets/img/pgw18home.jpg" alt="Ceci est une image" />
+          <h4>Paris Games Week 2018 et réunions d'information</h4>
+          <p>
+            Venez à notre rencontre lors de cette réunions d'information.
+            Témoignages des étudiants /Ateliers sur la pédagogie de projet
+            "Active Learning by Gaming Campus" / Découverte des locaux /
+            Rencontre avec l'équipe pédagogique / Questions réponses.
+          </p>
+          <a href="">LIRE LA SUITE </a>
+        </div>
+
+        <div class="bloc-trois">
+          <img
+            src="./assets/img/inauguration_gaming_campus_photo.jpg"
+            alt="Ceci est une image"
+          />
+          <h4>Réunion d'information 19 décembre</h4>
+          <p>
+            Revivez, l'inauguration du Gaming campus Lyon avec 180 invités, les
+            grandes annonces de la rentrée, les photos de la soirée et les
+            premières dates de réunion d'information.
+          </p>
+          <a href="">LIRE LA SUITE </a>
+        </div>
+      </div>
+    </section>
+    <!-- section quatre -->
+    <section class="section-quatre">
+      <div class="container-un">
+        <img src="./assets/img/logo-gc-footer.jpg" alt="Ceci est une image" />
+      </div>
+      <div class="container-deux">
+        <h2>INFOS PRATIQUES</h2>
+        <li>Gaming Business School</li>
+        <li>Gaming Academy</li>
+        <li>Gaming Guru</li>
+        <li>Recrutement</li>
+        <li>Investisseur</li>
+        <li>Mentions légales</li>
+        <li>C.G.U</li>
+      </div>
+      <div class="container-trois">
+        <h2>PARENTS</h2>
+        <p>
+          Questions / réponses pour vous accompagner dans votre réflexion sur
+          l'orientation de votre enfant et le choix de Gaming Campus.
+        </p>
+        <a href="">En savoir plus</a>
+      </div>
+      <div class="container-quatre">
+        <h2>NOUS CONTACTER</h2>
+        <p>Tel. 04 28 29 81 03</p>
+        <p>contact@gamingcampus.fr</p>
+        <h2>NOUS SUIVRE</h2>
+        <img src="" alt="image twitter Facebook Linkedin insta" />
+        <p>2018 Gaming Campus.</p>
+        <p>Tout droits réservés</p>
+      </div>
+      <!-- ******trait gris****** -->
+      <div class="trait-gris"></div>
+      <!-- ******container journalistes****** -->
+      <div class="container-journalistes">
+        <div class="container-cinq">
+          <h2>ILS PARLENT DE NOUS</h2>
+          <p>voir toutes les retombées press</p>
+        </div>
+        <div class="container-six">
+          <img src="./assets/img/figaro.png" alt="ceci est une image" />
+          <img src="./assets/img/challenges.png" alt="ceci est une image" />
+          <img src="./assets/img/leparisien.png" alt="ceci est une image" />
+          <img src="./assets/img/lemonde.png" alt="ceci est une image" />
+          <img src="./assets/img/progres.png" alt="ceci est une image" />
+          <img src="./assets/img/echos.png" alt="ceci est une image" />
+          <img src="./assets/img/bfm.png" alt="ceci est une image" />
+          <img src="./assets/img/lequipe.png" alt="ceci est une image" />
+        </div>
+      </div>
+    </section>
+    <!-- SECTION PARTENAIRES -->
+    <footer>
+      <h2>PARTENAIRES OFFICIELS</h2>
+      <img src="./assets/img/apollo.png" alt="ceci est une image" />
+      <img src="./assets/img/chiliz.png" alt="ceci est une image" />
+      <img src="./assets/img/omen.png" alt="ceci est une image" />
+      <img src="./assets/img/joa.png" alt="ceci est une image" />
+      <img src="./assets/img/zol.png" alt="ceci est une image" />
+      <img src="./assets/img/maxonomic.png" alt="ceci est une image" />
+      <img src="./assets/img/credit-mutuel.png" alt="ceci est une image" />
+      <img src="./assets/img/talent-web.png" alt="ceci est une image" />
+      <img src="./assets/img/ubisoft.png" alt="ceci est une image" />
+      <img src="./assets/img/vitality.png" alt="ceci est une image" />
+    </footer>
+  </body>
+</html>
