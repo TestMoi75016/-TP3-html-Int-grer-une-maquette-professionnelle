@@ -1,3 +1,211 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+/*-------------NAV--------------*/
+nav ul {
+    display: flex;
+    justify-content: center;
+    
+}
+
+nav li {
+    text-transform: uppercase;
+    padding: 10px;
+    list-style: none;  /*N'affiche pas les points des listes*/
+    margin: 15px;
+    cursor: pointer;
+}
 nav li:nth-child(8) {
     color: blueviolet;
+    background: rgb(154, 154, 154);
+    border-radius: 30px;
+}
+
+
+/*--------------HEADER----------------*/
+.main-header {
+    background-image: url(./assets/img/bg.jpg);
+    background-size: cover; /* Sert à dire au navigateur que le background (ici une image) doit couvrir entierement le conteneur en étant parfaitement redimentionné*/
+    color: white;
+    text-align: center;
+}
+
+.main-header img {
+    margin: 20px;
+    padding: 40px;
+}
+.main-header h1 {
+    font-size: 24px; /*Taille du texte*/
+    margin: 20px;
+}
+
+.main-header button {
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    font-weight:bold;
+    padding: 15px;
+    cursor: pointer;
+    width: 300px;
+    background: transparent;
+    border: 1px solid;
+}
+/*----------------SECTION 1-------------------*/
+.section-un {
+ text-align: center;
+ font-weight: bold;   
+ padding: 40px;
+}
+
+/*----------------SECTION 2-------------------*/
+.section-deux {
+    background: black;
+}
+.section-deux-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new {
+    color:white; 
+    padding: 60px;
+    text-align: center;
+    width: 400px;
+}
+
+.row-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.new h3 {
+    padding: 40px;
+}
+
+.new button {
+    margin: 30px auto;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    font-weight:bold;
+    padding: 15px;
+    cursor: pointer;
+    width: 300px;
+    background: transparent;
+    border: 1px solid;
+}
+
+/*----------------SECTION 3-------------------*/
+
+.section-trois {
+    background: rgb(222, 219, 219);
+}
+
+.row-entete {
+    display: grid;
+    grid-template-columns: 65% 35%;
+}
+
+.row-entete-left {
+    margin: 60px;
+}
+
+.button-container {
+ margin: 30px;
+}
+
+.button-container button {
+    margin: 30px auto;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight:bold;
+    padding: 15px;
+    cursor: pointer;
+    width: 300px;
+    background: transparent;
+    border: 1px solid black;
+}
+
+/*Les bloc main*/
+.row-main-section-trois {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bloc-main {
+        width: 300px;
+}
+
+.bloc-main p {
+    margin: 30px auto;
+}
+
+.bloc-main a {
+    letter-spacing: 2px;
+    /*padding: 30px auto; bon j'arrive pas*/
+}
+
+/*----------------SECTION 4-------------------*/
+.container-top-section-quatre {
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.bloc-sec4 {
+    width: 300px;
+    /* bon je sais pas centrer tout ça  */
+
+}
+
+.bloc-sec4 li {
+   border: 2px red solid;
+   padding: 10px;
+   list-style: none;
+}
+
+/*------trait gris------*/
+.trait-gris {
+    height: 1px;
+    background: gray;
+    width: 80%;
+    margin: 20px auto;
+}
+
+/*----container-journalistes----*/
+.container-journalistes {
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+
+.new-journaliste {
+    text-align: center;
+}
+/* ----------------FOOTER-------------------- */
+footer {
+    background: black;
+    text-align: center;
+}
+
+footer h2 {
+    color: white;
+    margin: 30px;
+}
+.essai {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
 }

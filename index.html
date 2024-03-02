@@ -4,10 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>[TP3 html] Intégrer une maquette professionnelle</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Ci dessus : bibliotheque sur "cdn awesome font" sur google pour permettre d'afficher la fleche dans le boutton "gaming campus en vidéo". Tjr mettre après <title> -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Les liens de la nav -->
+    <!-- Les liens de la NAV -->
     <!-- Je pense la faire en display:grid -->
     <nav>
       <ul>
@@ -19,16 +28,25 @@
         <li>Le campus</li>
         <li>Newsroom</li>
         <li>Parents</li>
-        <li>FR|EN</li>
+        <li id="language">FR|EN</li>
+        <!-- "id" Sert à identifier ce li dans le css plus tard-->
       </ul>
     </nav>
-    <!-- Section header -->
+    <!-- SECTION HEADER -->
     <!-- Tout en block , text align: center;. arriere plan = z-index: 1; -->
     <header>
-      <img src="./assets/img/bg.jpg" alt="Ceci est une image" />
-      <img src="./assets/img/logo-gc-hero.png" alt="Ceci est une image" />
-      <h2>PASSION. PROFESSIONNALISME. PERFORMANCE.</h2>
-      <button>gaming</button>
+      <div class="main-header">
+        <!-- <img src="./assets/img/bg.jpg" alt="Ceci est une image" /> Image arrière plan pas utilisée: elle sera déclarée en CSS -->
+        <div id="logo">
+          <!--Prof utilise encore "id" pour identifier logo en css-->
+          <img src="./assets/img/logo-gc-hero.png" alt="Ceci est une image" />
+        </div>
+        <h1>PASSION. PROFESSIONNALISME. PERFORMANCE.</h1>
+        <button>
+          gaming campus en vidéo <i class="fa-solid fa-angle-right"></i>
+        </button>
+        <!--cette "i class" est copier collé du site suivant pour avoir la fleche https://fontawesome.com/icons/angle-right?f=classic&s=solid-->
+      </div>
     </header>
     <!-- Section-un -->
     <section class="section-un">
@@ -38,62 +56,70 @@
         compétences
       </p>
     </section>
-    <!-- Section deux avec 3 container row -->
+    <!-- SECTION DEUX avec 3 container row -->
     <!-- Je pense mettre section en flex et l'interieur des row en flex puis centrer  -->
     <section class="section-deux">
-      <div class="rowGBS">
-        <img src="./assets/img/logo-gbs-home.png" alt="Ceci est une image" />
-        <h2>GAMING BUSINESS SCHOOL</h2>
-        <p>
-          formez-vous dans la premire école de management dédiée aux enjeux et
-          métiers du jeux vidéo.
-        </p>
-        <button>EN SAVOIR PLUS</button>
-      </div>
-      <div class="rowGA">
-        <img src="./assets/img/logo-gbs-home.png" alt="Ceci est une image" />
-        <h2>GAMING ACADEMY</h2>
-        <p>
-          formez-vous dans la premire école de management dédiée aux enjeux et
-          métiers du jeux vidéo.
-        </p>
-        <button>EN SAVOIR PLUS</button>
-      </div>
-      <div class="rowGG">
-        <img src="./assets/img/logo-gbs-home.png" alt="Ceci est une image" />
-        <h2>GAMING GURU</h2>
-        <p>
-          formez-vous dans la premire école de management dédiée aux enjeux et
-          métiers du jeux vidéo.
-        </p>
-        <button>EN SAVOIR PLUS</button>
+      <div class="section-deux-row">
+        <div class="new">
+          <div class="row-img">
+          <img src="./assets/img/logo-gbs-home.png" alt="Ceci est une image" /></div>
+          <h3>GAMING BUSINESS SCHOOL</h3>
+          <p>
+            formez-vous dans la premire école de management dédiée aux enjeux et
+            métiers du jeux vidéo.
+          </p>
+          <button>EN SAVOIR PLUS</button>
+        </div>
+        <div class="new">
+          <div class="row-img">
+          <img src="./assets/img/logo-ga-home.png" alt="Ceci est une image" /></div>
+          <h3>GAMING ACADEMY</h3>
+          <p>
+            formez-vous dans la premire école de management dédiée aux enjeux et
+            métiers du jeux vidéo.
+          </p>
+          <button>EN SAVOIR PLUS</button>
+        </div>
+        <div class="new">
+          <div class="row-img">
+          <img src="./assets/img/logo-gg-home.png" alt="Ceci est une image" /></div>
+          <h3>GAMING GURU</h3>
+          <p>
+            formez-vous dans la premire école de management dédiée aux enjeux et
+            métiers du jeux vidéo.
+          </p>
+          <button>EN SAVOIR PLUS</button>
+        </div>
       </div>
     </section>
-    <!-- section trois -->
+    <!-- SECTION TROIS -->
     <section class="section-trois">
-      <div class="row-entête">
-        <div class="row-titre">
-          <h1>LES NEWS DU CAMPUS</h1>
+      <div class="row-entete">
+        <div class="row-entete-left">
+          <h2>LES NEWS DU CAMPUS</h2>
           <p>
             Suivez l'actualité de Gaming Campus, de G. Guru,G.B.S et G.Academy.
           </p>
         </div>
         <div class="button-container">
-          <button>LA NEWSROOM</button>
+          <button>LA NEWSROOM <i class="fa-solid fa-angle-right"></i></button>
         </div>
       </div>
-      <div class="row-section-trois">
-        <div class="bloc-un">
-          <img src="./assets/img/ri8decembre.jpg" alt="Ceci est une image" />
+      <div class="row-main-section-trois">
+        <div class="bloc-main">
+          <div class="row-img2">
+          <img src="./assets/img/ri8decembre.jpg" alt="Ceci est une image" /></div>
           <h4>Réunion d'information 19 décembre</h4>
           <p>
             Pendant tout le mois d'octobre venez rencontrer l'équipe pédagogique
             du Gaming Campus: Campus Lyon et stand Gaming Campus à la PGW18
           </p>
+          <a href="">SUR INSCRIPTION<i class="fa-solid fa-angle-right"></i></a>
         </div>
 
-        <div class="bloc-deux">
-          <img src="./assets/img/pgw18home.jpg" alt="Ceci est une image" />
+        <div class="bloc-main">
+          <div class="row-img2">
+          <img src="./assets/img/pgw18home.jpg" alt="Ceci est une image" /></div>
           <h4>Paris Games Week 2018 et réunions d'information</h4>
           <p>
             Venez à notre rencontre lors de cette réunions d'information.
@@ -101,65 +127,77 @@
             "Active Learning by Gaming Campus" / Découverte des locaux /
             Rencontre avec l'équipe pédagogique / Questions réponses.
           </p>
-          <a href="">LIRE LA SUITE </a>
+          <a href="">LIRE LA SUITE <i class="fa-solid fa-angle-right"></i></a>
         </div>
 
-        <div class="bloc-trois">
+        <div class="bloc-main">
+          <div class="row-img2">
           <img
             src="./assets/img/inauguration_gaming_campus_photo.jpg"
             alt="Ceci est une image"
-          />
+          /></div>
           <h4>Réunion d'information 19 décembre</h4>
           <p>
             Revivez, l'inauguration du Gaming campus Lyon avec 180 invités, les
             grandes annonces de la rentrée, les photos de la soirée et les
             premières dates de réunion d'information.
           </p>
-          <a href="">LIRE LA SUITE </a>
+          <a href="">LIRE LA SUITE <i class="fa-solid fa-angle-right"></i></a>
         </div>
       </div>
     </section>
-    <!-- section quatre -->
+    <!-- SECTION QUATRE-->
     <section class="section-quatre">
-      <div class="container-un">
-        <img src="./assets/img/logo-gc-footer.jpg" alt="Ceci est une image" />
-      </div>
-      <div class="container-deux">
-        <h2>INFOS PRATIQUES</h2>
-        <li>Gaming Business School</li>
-        <li>Gaming Academy</li>
-        <li>Gaming Guru</li>
-        <li>Recrutement</li>
-        <li>Investisseur</li>
-        <li>Mentions légales</li>
-        <li>C.G.U</li>
-      </div>
-      <div class="container-trois">
-        <h2>PARENTS</h2>
-        <p>
-          Questions / réponses pour vous accompagner dans votre réflexion sur
-          l'orientation de votre enfant et le choix de Gaming Campus.
-        </p>
-        <a href="">En savoir plus</a>
-      </div>
-      <div class="container-quatre">
-        <h2>NOUS CONTACTER</h2>
-        <p>Tel. 04 28 29 81 03</p>
-        <p>contact@gamingcampus.fr</p>
-        <h2>NOUS SUIVRE</h2>
-        <img src="" alt="image twitter Facebook Linkedin insta" />
-        <p>2018 Gaming Campus.</p>
-        <p>Tout droits réservés</p>
+      <!-- PROF: faire un container des 4 container: -->
+      <div class="container-top-section-quatre">
+        <div class="bloc-sec4">
+          <div class="row-img3">
+          <img src="./assets/img/logo-gc-footer.jpg" alt="Ceci est une image" /></div>
+        </div>
+        <div class="bloc-sec4">
+          <h2>INFOS PRATIQUES</h2>
+          <ul>
+          <li><a href="">Gaming Business School</a></li>
+          <li><a href="">Gaming Academy</a></li>
+          <li><a href="">Gaming Guru</a></li>
+          <li><a href="">Recrutement</a></li>
+          <li><a href="">Investisseur</a></li>
+          <li><a href="">Mentions légales</a></li>
+          <li><a href="">C.G.U</a></li>
+        </ul>
+        </div>
+        <div class="bloc-sec4">
+          <h5>PARENTS</h5>
+          <p>
+            Questions / réponses pour vous accompagner dans votre réflexion sur
+            l'orientation de votre enfant et le choix de Gaming Campus.
+          </p>
+          <a href="">En savoir plus</a>
+        </div>
+        <div class="bloc-sec4">
+          <h2>NOUS CONTACTER</h2>
+          <p>Tel. 04 28 29 81 03</p>
+          <p>contact@gamingcampus.fr</p>
+          <h2>NOUS SUIVRE</h2>
+          <div class="logo-réseaux">
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+          <p>2018 Gaming Campus.</p>
+          <p>Tout droits réservés</p>
+        </div>
       </div>
       <!-- ******trait gris****** -->
       <div class="trait-gris"></div>
       <!-- ******container journalistes****** -->
       <div class="container-journalistes">
-        <div class="container-cinq">
+        <div class="new-journaliste">
           <h2>ILS PARLENT DE NOUS</h2>
           <p>voir toutes les retombées press</p>
         </div>
-        <div class="container-six">
+        <div class="new-journaliste">
           <img src="./assets/img/figaro.png" alt="ceci est une image" />
           <img src="./assets/img/challenges.png" alt="ceci est une image" />
           <img src="./assets/img/leparisien.png" alt="ceci est une image" />
@@ -174,16 +212,19 @@
     <!-- SECTION PARTENAIRES -->
     <footer>
       <h2>PARTENAIRES OFFICIELS</h2>
-      <img src="./assets/img/apollo.png" alt="ceci est une image" />
-      <img src="./assets/img/chiliz.png" alt="ceci est une image" />
-      <img src="./assets/img/omen.png" alt="ceci est une image" />
-      <img src="./assets/img/joa.png" alt="ceci est une image" />
-      <img src="./assets/img/zol.png" alt="ceci est une image" />
-      <img src="./assets/img/maxonomic.png" alt="ceci est une image" />
-      <img src="./assets/img/credit-mutuel.png" alt="ceci est une image" />
-      <img src="./assets/img/talent-web.png" alt="ceci est une image" />
-      <img src="./assets/img/ubisoft.png" alt="ceci est une image" />
-      <img src="./assets/img/vitality.png" alt="ceci est une image" />
+      <div class="essai">
+        <span>
+          <span><img src="./assets/img/apollo.png" alt="ceci est une image" /></span>
+          <span><img src="./assets/img/chiliz.png" alt="ceci est une image" /></span>
+          <span><img src="./assets/img/omen.png" alt="ceci est une image" /></span>
+          <span><img src="./assets/img/joa.png" alt="ceci est une image" /></span>
+          <span><img src="./assets/img/zol.png" alt="ceci est une image" /></span>
+          <span><img src="./assets/img/maxonomic.png" alt="ceci est une image" /></span>
+          <span><img src="./assets/img/credit-mutuel.png" alt="ceci est une image" /></span>
+          <span><img src="./assets/img/talent-web.png" alt="ceci est une image" /></span>
+          <span><img src="./assets/img/ubisoft.png" alt="ceci est une image" /></span>
+          <span> <img src="./assets/img/vitality.png" alt="ceci est une image" /></span>
+      </essai>
     </footer>
   </body>
 </html>
