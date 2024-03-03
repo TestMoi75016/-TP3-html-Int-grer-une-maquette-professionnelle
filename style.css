@@ -2,41 +2,87 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    /*list-style: none;  On peut la mettre dans le "*" directement*/
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
+@font-face {
+    font-family:"Montserrat";
+    src: url(./assets/font/Montserrat-Thin.ttf);
+}
 
 body {
     font-family: "Montserrat", sans-serif;
+    margin: 0 auto;
+    text-align: center;
+    /**Ci-dessus ces 2 lignes pr que tous soit centré**/
 }
 
 /*-------------NAV--------------*/
+a {
+    text-decoration: none; /*masque la barre qui souligne les liens clickables*/
+}
+nav {
+    max-width: 1100px; /*Nav délimité pour ne pas qu'elle s'aggrandisse trop sur grand écran ça fait moche*/
+    margin: 0 auto; /*nav centrée*/
+}
 nav ul {
-    display: flex;
-    justify-content: center;
+    display: flex; /* Aligner les li de ul*/
+    justify-content: space-between;
+    align-items: center;
     
 }
 
 nav li {
     text-transform: uppercase;
-    padding: 10px;
+    padding: 20px 0;
     list-style: none;  /*N'affiche pas les points des listes*/
     margin: 15px;
     cursor: pointer;
+    font-size: 0.9rem;
+    font-weight:900; /* Ne marche pas, aucun effet*/
+    position: relative; /*Dans élément principal. Pr faire l'effet avec le before quand on hover un li. Permet de délimité une zone pour le before*/
 }
-nav li:nth-child(8) {
-    color: blueviolet;
-    background: rgb(154, 154, 154);
-    border-radius: 30px;
+nav li:nth-child(1) {
+    color:rgb(71, 15, 169);
+    border: 2px solid red;
+}
+nav li:first-child:before {
+    content:"";
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    background: rgb(95, 4 ,170);
+    transform: translateY(-20px); /*on veut que le before descende de 20px à la fin de son animation quand on hover sur le li*/
 }
 
+nav li:hover:before {
+/* Quand on survole le li j'aimerai que le before ait ce comportement: */
+    content:"";
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    background: rgb(95, 4 ,170);
+    transform: translateY(-20px);
+/*6 lignes précédentes indique création d'un before à chaque survolement d'un li*/
+}
+
+nav li:nth-child(8):before {
+    display:none; /*before ne s'affiche pas sur FR|EN*/
+}
+#language {
+    background: rgba(128, 128, 128, 0.25);
+    border-radius: 50px;
+    padding: 8px 16px; /*(haut-bas et gauche-droite)*/
+}
+ 
 
 /*--------------HEADER----------------*/
 .main-header {
-    background-image: url(./assets/img/bg.jpg);
-    background-size: cover; /* Sert à dire au navigateur que le background (ici une image) doit couvrir entierement le conteneur en étant parfaitement redimentionné*/
+/* image arriere-plan , (fixed = elle reste fixe): */
+    background: url(./assets/img/bg.jpg) fixed center/cover;
+    /* background-size: cover;*/ /*Sert à dire au navigateur que le background (ici une image) doit couvrir entierement le conteneur en étant parfaitement redimentionné. On UTILISE PAS ici */
     color: white;
-    text-align: center;
+    padding: 60px;
 }
 
 .main-header img {
@@ -45,49 +91,66 @@ nav li:nth-child(8) {
 }
 .main-header h1 {
     font-size: 24px; /*Taille du texte*/
-    margin: 20px;
+    margin: 20px 0 35px; /* Quand 3 valeurs: 2Opx de marge EN HAUT, 0 SUR COTES et 35 EN BAS*/
 }
 
 .main-header button {
-    margin-bottom: 30px;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: white;
     font-weight:bold;
-    padding: 15px;
+    padding: 15px 30px; /*15 Haut-Bas 30 sur COTES*/
     cursor: pointer;
-    width: 300px;
+    /* width: 300px; pas besoin */ 
     background: transparent;
     border: 1px solid;
+    transition: 0.4s ease;
 }
+.main-header button:hover {
+        background:rgba(141, 32, 204, 0.712); /*Transition dans élément principal ".main-header button"*/
+}
+
+.main-header i {
+    transform: translateX(5px); /*Décalage vers la droite du chevron "i" dans le bouton*/
+}
+
 /*----------------SECTION 1-------------------*/
-.section-un {
- text-align: center;
- font-weight: bold;   
- padding: 40px;
+.section-un  {
+    margin: 0 auto;
+ /* text-align: center; on utilise m0 auto; */
+   font-weight: bold;   
+   font-size: 1.2rem;
+   padding: 40px 0;
+   max-width: 1100px; /*Comme pr la Nav barre car après c'est laid si ça sétire trop sur grand écran*/;
+   line-height: 34px; /*espace entre 2 lignes d'un même <p*/>
 }
 
 /*----------------SECTION 2-------------------*/
 .section-deux {
-    background: black;
+    background: black; 
 }
 .section-deux-row {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    max-width: 1100px;
+    margin: 0 auto; /* pour recentrer car on a mit une max-width, ce qui décale l'élément vers la gauche et une marge se crée à droite quand on dépasse la max-width*/
 }
 
 .new {
     color:white; 
-    padding: 60px;
+    padding: 60px 0;
     text-align: center;
-    width: 400px;
+   
 }
 
 .row-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: 30px;
+}
+
+.new p {
+    width: 80%;
+    margin: 10px auto 20px; /*10 en haut, auto sur cotés dc centré et 20 en bas*/
 }
 .new h3 {
     padding: 40px;
@@ -99,57 +162,87 @@ nav li:nth-child(8) {
     letter-spacing: 2px;
     color: white;
     font-weight:bold;
-    padding: 15px;
+    padding: 9px 32px;
     cursor: pointer;
-    width: 300px;
+    /* width: 300px; Pas besoin */
     background: transparent;
     border: 1px solid;
+    transition: O.4s ease; /*Transition se met ds élément principal. 0.4s pour passer de son background noir à violet*/
 }
 
+.new button:hover {
+    background:rgba(141, 32, 204, 0.712); /*Transition dans élément principal ".new button"*/
+}
 /*----------------SECTION 3-------------------*/
 
 .section-trois {
-    background: rgb(222, 219, 219);
+    background: #F7F7F7;
+    padding: 80px 0 45px;
 }
 
 .row-entete {
     display: grid;
-    grid-template-columns: 65% 35%;
+    grid-template-columns: 70% 30%;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .row-entete-left {
-    margin: 60px;
+    line-height: 30px; /*espace le <p> du h2 de 30px de hauteur*/
 }
 
-.button-container {
- margin: 30px;
+.row-entete-left h2 {
+    letter-spacing: 2px;
+    text-align: left; /*Aligne le h2 vers la gauche*/
 }
+
+.row-entete-left p {
+    font-weight: bold;
+    text-align: left; /*Aligne le <p> vers la gauche*/
+    font-size: 0.9rem;
+}
+
+/* .button-container {
+ margin: 30px;
+}  pas utilisé */
 
 .button-container button {
-    margin: 30px auto;
+    /* margin: 60px auto; */
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     font-weight:bold;
-    padding: 15px;
+    padding: 10px 20px;
     cursor: pointer;
-    width: 300px;
     background: transparent;
     border: 1px solid black;
+    transition: 0.4s ease;
+}
+
+.button-container button:hover {
+    background:rgba(141, 32, 204, 0.712); /*Transition dans élément principal ".button-container button"*/
 }
 
 /*Les bloc main*/
 .row-main-section-trois {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .bloc-main {
         width: 300px;
+        max-width: 23%;
 }
-
+ .row-img2 img { /*on s'adresse aux img du container row-im2 du container bloc-main.  */
+  width: 100%;
+  border-radius: 3px;
+  box-shadow: 0px 3px 6px 0px black;;
+ }
 .bloc-main p {
     margin: 30px auto;
+  
 }
 
 .bloc-main a {
@@ -175,6 +268,10 @@ align-items: center;
    border: 2px red solid;
    padding: 10px;
    list-style: none;
+}
+
+.logo-réseaux{
+    cursor: pointer;
 }
 
 /*------trait gris------*/
@@ -209,3 +306,6 @@ footer h2 {
     justify-content: center;
     margin: 30px;
 }
+
+/*_-_-_-REMARQUES_-_-_-
+- J'aurai pu faire un unique paramétrage pour les bouttons qui sont tous les mêmes quasiments et modifier les petites diff au fur et à mesure*/
