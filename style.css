@@ -44,7 +44,7 @@ nav li {
 }
 nav li:nth-child(1) {
     color:rgb(71, 15, 169);
-    border: 2px solid red;
+    
 }
 nav li:first-child:before {
     content:"";
@@ -121,8 +121,8 @@ nav li:nth-child(8):before {
    font-weight: bold;   
    font-size: 1.2rem;
    padding: 40px 0;
-   max-width: 1100px; /*Comme pr la Nav barre car après c'est laid si ça sétire trop sur grand écran*/;
-   line-height: 34px; /*espace entre 2 lignes d'un même <p*/>
+   max-width: 1100px; /*Comme pr la Nav barre car après c'est laid si ça sétire trop sur grand écran*/
+   line-height: 34px; /*espace entre 2 lignes d'un même <p>*/
 }
 
 /*----------------SECTION 2-------------------*/
@@ -225,55 +225,106 @@ nav li:nth-child(8):before {
 /*Les bloc main*/
 .row-main-section-trois {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-around; /*Pas besoin de align item: center*/
     max-width: 1100px;
-    margin: 0 auto;
+    margin: 45px auto;
 }
 
 .bloc-main {
-        width: 300px;
-        max-width: 23%;
-}
+       position: relative; /*Le prof veux contenir relativement les boutons dans bloc-main et les mettre en absolute car sinon ils ne s'allignent pas, car le texte <p> est plus ou moins long dans chaque bloc*/
+       max-width: 23%;
+      
+}/* JE ME SUIS ARRETE ICI PR LA CORRECTION*/
  .row-img2 img { /*on s'adresse aux img du container row-im2 du container bloc-main.  */
-  width: 100%;
-  border-radius: 3px;
-  box-shadow: 0px 3px 6px 0px black;;
+    width: 100%;
+    object-fit: cover; /*Empêche la déformation de l'image en responsive*/
+    border-radius: 3px;
+    box-shadow: 0px 3px 6px 0px black;
  }
+
+ .bloc-main h4 {
+    margin: 15px 0;
+    text-align: left;
+ }
+
 .bloc-main p {
-    margin: 30px auto;
-  
+    margin-bottom: 45px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 0.8rem;
+    line-height: 20px;
 }
 
-.bloc-main a {
+.link { /*Prof à mit les a href dans une class commune "link"*/
+    position: absolute; 
+    text-align: left;
+    bottom: 0;
     letter-spacing: 2px;
-    /*padding: 30px auto; bon j'arrive pas*/
+}
+
+.link > a {
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.link > a:hover {
+    color: rgba(180,180,180,1);
+}
+.bloc-main i {
+    transform: translateX(5px); /* Ajoute un espace de 5px de large entre le ahref et la fleche*/
 }
 
 /*----------------SECTION 4-------------------*/
+.section-quatre {
+    padding: 65px 0 20px;
+    max-width: 1100px;  /*margin: 0 auto; pour centrer quand on met une max width*/
+    margin: 0 auto;
+}
 .container-top-section-quatre {
 display: flex;
-justify-content: center;
-align-items: center;
-
+justify-content: space-around;
+font-weight: 600;  /*ma police bug malheureusement*/xxx
 }
 
 .bloc-sec4 {
-    width: 300px;
-    /* bon je sais pas centrer tout ça  */
+    text-align:left;
+    width: 23%
+    /* obligé de forcer car sinon le texte du bloc 3 prend trop de place */
+}
 
+.bloc-sec4 h5 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
 }
 
 .bloc-sec4 li {
-   border: 2px red solid;
-   padding: 10px;
+   margin: 15px auto;
    list-style: none;
 }
 
-.logo-réseaux{
-    cursor: pointer;
+.bloc-sec4 p {
+    line-height: 22px;
+    margin-bottom: 15px;
 }
 
+.bloc-sec4 h6 { /*Tel et adresse mail */
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+
+}
+.logo-réseaux{
+    cursor: pointer;
+    margin: 10px 0 30px;
+    letter-spacing: 8px;
+}
+
+h7 {
+    margin: 0;
+}
+
+.logo-réseaux i {
+    transform: translateX(2px);
+}
 /*------trait gris------*/
 .trait-gris {
     height: 1px;
@@ -282,30 +333,57 @@ align-items: center;
     margin: 20px auto;
 }
 
-/*----container-journalistes----*/
-.container-journalistes {
-    display: grid;
-    grid-template-columns: 25% 75%;
+/*----container-journalistes sous le trait gris----*/
+.container-journalistes { 
+    padding: 20px 0 15px;
+     display: flex;
+     align-items: center;
+     width: 95%;
+     margin: 0 auto;
+    
 }
 
-.new-journaliste {
-    text-align: center;
+
+.new-journaliste {  /*Container gauche*/
+    text-align: left;
+    width: 30%;
 }
+
+.new-journaliste h2 {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.new-journaliste p{
+    font-size: 0.9rem;
+}
+
+.new-journaliste-media-logo {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    
+}
+
+
 /* ----------------FOOTER-------------------- */
 footer {
-    background: black;
+    background: rgb(15, 15, 15);
     text-align: center;
+    padding: 25px;  /*marge INTERIEURE de 25px;*/
 }
 
 footer h2 {
-    color: white;
-    margin: 30px;
-}
-.essai {
-    display: flex;
-    justify-content: center;
-    margin: 30px;
+    color: whitesmoke;
+    margin: 32px;
 }
 
-/*_-_-_-REMARQUES_-_-_-
-- J'aurai pu faire un unique paramétrage pour les bouttons qui sont tous les mêmes quasiments et modifier les petites diff au fur et à mesure*/
+.essai {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+/*_-_-_-REMARQUES_-_-_-*/
+/*- J'aurai pu faire un unique paramétrage pour les bouttons qui sont tous les mêmes quasiments et modifier les petites diff au fur et à mesure*/
