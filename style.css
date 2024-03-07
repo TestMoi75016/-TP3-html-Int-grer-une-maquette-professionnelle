@@ -387,3 +387,30 @@ footer h2 {
 
 /*_-_-_-REMARQUES_-_-_-*/
 /*- J'aurai pu faire un unique paramétrage pour les bouttons qui sont tous les mêmes quasiments et modifier les petites diff au fur et à mesure*/
+
+/*----- RESPONSIVE-----*/
+/*****Tablette iPad Pro 11*****/
+
+@media screen and (max-width: 834px) {  /* Quand on est en dessous de 834px alors : */
+    nav li {
+        font-size: 0.7rem;
+    }
+
+    .main-header img {
+        width: 60%; /* En % ainsi l'image gaming campus ne cassera plus*/
+    }
+
+    .bloc-sec4, .bloc-sec4 ul {
+        padding-left: 15px; /* On add un padding left à tous les bloc section 4 afin de gagner encore en espace sur tablette*/
+    }
+    .new-journaliste-media-logo img { /*--logo des journalistes--*/
+        width: 40px;
+    }
+    .essai {  /*--images du footer--*/
+
+    flex-wrap: wrap; /*flexwrap: wrap; renvoie à la ligne tout ce qui dépasse en largeur. Et tout ce qui va à la ligne reste sur la même ligne grâce à "flexwrap"*/
+    }
+    .essai img {
+        margin: 5px;  /*Ajoute une large aux logo du footer qui s'éloignent les un des autres et c'est + beau*/
+    }
+}
