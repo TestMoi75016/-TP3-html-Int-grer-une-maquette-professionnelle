@@ -414,3 +414,50 @@ footer h2 {
         margin: 5px;  /*Ajoute une large aux logo du footer qui s'éloignent les un des autres et c'est + beau*/
     }
 }
+
+@media screen and (max-width: 704px) { 
+/*nav*/
+    nav li {
+        display: none;
+    }
+/*section2*/    
+    .section-deux-row {
+        display: block;
+    }
+
+    .new {
+        padding: 10px 0;
+    }
+    .row-img {
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+/*section3*/
+    .row-entete-left  h2 {
+        text-align: center;
+    }
+    
+    .row-entete-left p {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .row-main-section-trois{
+        display: block;
+    }
+    .bloc-main {
+        margin: 0 auto;
+        max-width: 80%;
+    }
+    
+    .bloc-main img {
+        width: 50%;
+    }
+    .row-entete {
+        display: block;
+    }
+/*section4*/
+    .section-quatre {  /* On affiche pas la section quatre comme demandé sur la maquette mobile */
+        display: none;
+    }
+}
